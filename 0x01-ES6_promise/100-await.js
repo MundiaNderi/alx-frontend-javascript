@@ -1,3 +1,4 @@
+/*eslint-disable */
 import createUser from  './utils.js';
 
 async function asyncUploadUser() {

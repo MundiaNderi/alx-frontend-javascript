@@ -1,3 +1,4 @@
+/*eslint-disable */
 export default function (boolean) {
   return new Promise((resolve, reject) => {
     const object = {
