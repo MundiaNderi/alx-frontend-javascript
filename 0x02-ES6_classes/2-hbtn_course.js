@@ -32,7 +32,7 @@ class HolbertonCourse {
 
     validateString(value, attribute) {
         if (typeof value !== "string") {
-            throw new TypeEroor('${attribute} must be a string');
+            throw new TypeError('${attribute} must be a string');
         }
         return value;
 
