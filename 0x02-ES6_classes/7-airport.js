@@ -1,5 +1,4 @@
 /*eslint-disable */
-
 class Airport {
     constructor(name, code) {
         this._name = name;
@@ -12,10 +11,6 @@ class Airport {
 
     get code(){
         return this._code
-    }
-
-    toString() {
-        return `[${this._code}] ${this._name}`;
     }
 }
 
