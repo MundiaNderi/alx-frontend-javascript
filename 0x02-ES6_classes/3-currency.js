@@ -1,8 +1,8 @@
 /*eslint-disable */
 class Currency {
     constructor(code, name) {
-        this._code = this.ValidatedString(code, "Code");
-        this._name = this.ValidatedString(name, "Name");
+        this._code = this.validatedString(code, "Code");
+        this._name = this.validatedString(name, "Name");
     }
 
     get code() {
@@ -10,7 +10,7 @@ class Currency {
     }
 
     set code(newCode) {
-        this._code = this.ValidatedString(code, "Code"); 
+        this._code = this.validatedString(code, "Code"); 
     }
 
     get name () {
@@ -18,7 +18,7 @@ class Currency {
     }
 
     set name(newName) {
-        this._name = this.ValidatedString(name, "Name"); 
+        this._name = this.validatedString(name, "Name"); 
     }
 
     displayFullCurrency() {
