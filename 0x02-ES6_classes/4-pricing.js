@@ -1,6 +1,6 @@
 /*eslint-disable */
 
-import Currency from './3-currency.js';
+import Currency from "./3-currency.js";
 
 class Pricing {
     constructor(amount, currency) {
@@ -28,7 +28,7 @@ class Pricing {
         }
     }
 
-    displayFullCurrency() {
+    displayFullPrice() {
         return `${this._amount} (${this._currency.name}) (${this._currency.code})`;
     }
 
