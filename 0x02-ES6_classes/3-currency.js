@@ -1,8 +1,8 @@
 /*eslint-disable */
 class Currency {
     constructor(code, name) {
-        this._code = this.validatedString(code, "Code");
-        this._name = this.validatedString(name, "Name");
+        this._code = code;
+        this._name = name;
     }
 
     get code() {
@@ -10,32 +10,23 @@ class Currency {
     }
 
     set code(newCode) {
-        this._code = this.validatedString(code, "Code"); 
+        this._code = newCode;
     }
 
-    get name () {
+    get name() {
         return this._name;
     }
 
     set name(newName) {
-        this._name = this.validatedString(name, "Name"); 
+        this._name = newName;
     }
 
     displayFullCurrency() {
         return `${this._name} (${this._code})`;
     }
-
-    validateString(value, attribute) {
-        if (typeof value !== "string") {
-            throw new TypeError('${attribute} must be a string');
-        }
-        return value;
-
-    }
 }
 
 export default Currency;
-
 
 
 
