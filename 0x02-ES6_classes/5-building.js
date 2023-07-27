@@ -1,6 +1,5 @@
 /*eslint-disable */
-
-class Building{
+class Building {
     constructor(sqft) {
         this._sqft = sqft;
     }
