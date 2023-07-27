@@ -1,5 +1,4 @@
 /*eslint-disable */
-
 const _brand = Symbol('brand');
 const _motor = Symbol('motor');
 const _color = Symbol('color');
