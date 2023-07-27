@@ -18,3 +18,5 @@ class Airport {
         return `[${this._code}] ${this._name}`;
     }
 }
+
+export default Airport;
