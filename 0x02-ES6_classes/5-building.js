@@ -6,11 +6,11 @@ class Building{
     }
 
     get sqft() {
-        return this.sqft;
+        return this._sqft;
     }
 
     evacuationWarningMessage() {
-        throw new error('Class extending Building must override evacuationWarningMessage');
+        throw new Error('Class extending Building must override evacuationWarningMessage');
     }
 }
 
