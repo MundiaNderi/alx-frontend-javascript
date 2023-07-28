@@ -1,4 +1,4 @@
-0x00-ES6_basic	
+/*eslint-disable */
 export default function taskBlock(trueOrFalse) {
     if (trueOrFalse) {
       var task = true;
