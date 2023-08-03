@@ -9,6 +9,8 @@ interface DirectorInterface {
     getCoffeeBreak(): string;
     workTeacherTasks(): string;
   }
+
+type Subjects = 'Math' | 'History';
   
 class Director implements DirectorInterface {
     workFromHome(): string {
@@ -37,11 +39,33 @@ class Director implements DirectorInterface {
       return 'Getting to work';
     }
   }
+
+  function isDirector(employee: Director | Teacher): employee is Director {
+    return 'workDirectorTasks' in employee;
+  }
   
   function createEmployee(salary: number | string): Director | Teacher {
     if (typeof salary === 'number' && salary < 500) {
       return new Teacher();
     } else {
       return new Director();
+    }
+  }
+
+  function executeWork(employee: Director | Teacher): string {
+    if (isDirector(employee)) {
+      return employee.workDirectorTasks();
+    } else {
+      return employee.workTeacherTasks();
+    }
+  }
+
+  function teachClass(todayClass: Subjects): string {
+    if (todayClass === 'Math') {
+      return 'Teaching Math';
+    } else if (todayClass === 'History') {
+      return 'Teaching History';
+    } else {
+      throw new Error('Invalid subject');
     }
   }
