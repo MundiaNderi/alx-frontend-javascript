@@ -16,6 +16,36 @@ interface TeacherOptions {
     [key: string]: any;
 }
 
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+interface StudentAttributes {
+  firstName: string;
+  lastName: string;
+}
+
+interface StudentClassInterface {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+class StudentClass implements StudentClassInterface {
+  private readonly attributes: StudentAttributes;
+
+  constructor({ firstName, lastName }: StudentAttributes) {
+    this.attributes = { firstName, lastName };
+  }
+
+  workOnHomework(): string {
+    return 'Currently working';
+  }
+
+  displayName(): string {
+    return this.attributes.firstName;
+  }
+}
+
 class Teacher {
     private readonly attributes: TeacherAttributes;
     private readonly options: TeacherOptions;
@@ -32,5 +62,13 @@ class Teacher {
         .join('\n')}`;
     }
   }
+
+  function printTeacher(firstName: string, lastName: string): string {
+    const firstLetter = firstName.charAt(0).toUpperCase();
+    const formattedLastName = lastName.charAt(0).toUpperCase() + lastName.slice(1);
+    return `${firstLetter}. ${formattedLastName}`;
+  }
   
-  export default Teacher;
+  export { Teacher, Directors, printTeacher };
+
+  
